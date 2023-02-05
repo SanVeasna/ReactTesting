@@ -1,5 +1,8 @@
 import sum from "../sum";
+import {expect,describe,it} from 'vitest';
 
-test('add 2 + 1 equal 3',()=>{
-    expect(sum(1,2).toBe(3))
+describe('#sum',()=>{
+    it("return 0 with no number",()=>{
+        expect(sum()).toBe(0);
+    })
 })
