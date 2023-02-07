@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import reactLogo from './assets/react.svg'
+import HomePage from './components/Home'
 import './App.css'
 interface Data {
   name: string,
@@ -19,6 +20,7 @@ function App() {
   }
   return (
     <div className="App">
+      <HomePage title="Hello, World"></HomePage>
       <form onSubmit={handleSubmit}>
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} id="name"></input>
         <input type="number" value={age} onChange={(e) => setAge(parseInt(e.target.value))} id="age"></input>
@@ -78,4 +80,4 @@ function CountNumber() {
   )
 }
 
-export default CountNumber
+export default App;
